@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="\static\add_project_style.css" />
+    </head>
+    <body>
+        <div class="detailSection">
+            <form action="/submit_project" method="POST" class="projectForm" name="projectForm">
+            <h2>Project Details</h2>
+            <ul class="noBullet">
+                <li>
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" placeholder="Enter Project Name*" value="" required/>
+                </li>
+                <li>
+                    <label for="descr"></label>
+                    <textarea rows=3 columns=25 id="descr" name="descr" placeholder="Enter Project Description*" required></textarea>
+                </li>
+                <li>
+                    <label for="plang"></label>
+                    <select id="plang" name="plang" name="plang" required>
+                        <option value="">Select a Primary Language*</option>
+                        <option value="Python">Python</option>
+                        <option value="MySQL">MySQL</option>
+                        <option value="Tableau">Tableau</option>
+                        <option value="PowerBI">PowerBI</option>
+                        <option value="MSExcel">MSExcel</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="slang"></label>
+                    <select id="slang" name="slang" name="slang" required>
+                        <option value="">Select a Secondary Language*</option>
+                        <option value="Python">Python</option>
+                        <option value="MySQL">MySQL</option>
+                        <option value="Tableau">Tableau</option>
+                        <option value="PowerBI">PowerBI</option>
+                        <option value="MSExcel">MSExcel</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="objective"></label>
+                    <select id="objective" name="objective" name="objective" required>
+                        <option value="">Select an objective*</option>
+                        <option value="Machine Learning">Machine Learning</option>
+                        <option value="Statistical Analysis">Statistical Analysis</option>
+                        <option value="Business Visualization">Business Visualization</option>
+                        <option value="Web Deployment Using Flask">Web Deployment Using Flask</option>
+                    </select>                
+                </li>
+                <li>
+                    <label for="status"></label>
+                    <select id="status" name="status" name="status" required>
+                        <option value="">Select Status*</option>
+                        <option value="Complete">Complete</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="On Hold">On Hold</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="git"></label>
+                    <input type="text" id="git" name="git" placeholder="Github Link" value="" />
+                </li>
+                <li>
+                    <label for="demo"></label>
+                    <input type="text" id="demo" name="demo" placeholder="Live Demo" value="" />
+                </li>
+                <li id="center-btn">
+                    <input type="submit" id="add" name="add" alt="Add" value="Add Project">
+                </li>
+            </ul>
+            </form>
+        </div>
+    </body>
+</html>

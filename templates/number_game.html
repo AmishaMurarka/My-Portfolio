@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html lang="en">
+    
+    <head>
+        <title>Games</title>
+        <style>
+            body {
+                background-color:AliceBlue;
+            }
+            h2 {
+                text-align: center;
+                color: CornflowerBlue;
+                font-size: 250%;
+            }
+            hr {
+                width: 50%;
+            }
+            p {
+                text-align: center;
+                font-size: 160%;
+            }
+            #res_text {
+                color: red;
+                font-size: 150%;
+            }
+            #number_guess {
+                padding: 20px;
+                margin: auto;
+                width: 25%;
+                text-align: center;
+            }
+            input {
+                background-color: AliceBlue;
+                border: none;
+                border-bottom: 2px solid MidnightBlue;
+                font-size: 200%;
+                width: 25%;
+                text-align: center;
+            }
+            button {
+                background-color: CornflowerBlue;
+                border: 3px solid MidnightBlue;
+                color: white;
+                padding: 16px 16px;
+                text-decoration: none;
+                margin: 30px 2px;
+                font-size: 150%;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h2>Welcome to the Number Guessing Game!</h2>
+        <hr>
+        <p>I have thought of a number between 1 and 100</p>
+        <p>Take a guess! </p>
+        <br><br>
+        <div id = "number_guess">
+        {% if res == 'noinput' %}
+            <form action='/number_game/guess' method="post">
+                <input type = "number" name = "guess"/> <br><br>
+                <button> Submit </button>
+            </form>
+        {% elif res == 'high' %}
+            <form action='/number_game/guess' method="post">
+                <input type = "number" name = "guess"/> <br><br>
+                <p id="res_text">You guessed higher!!!</p>
+                <button> Submit </button>
+            </form>
+        {% elif res == 'low' %}
+            <form action='/number_game/guess' method="post">
+                <input type = "number" name = "guess"/> <br><br>
+                <p id="res_text">You guessed lower...</p>
+                <button> Submit </button>
+            </form>
+        {% elif res == 'correct' %}
+            <form action='/number_game'>
+                <p style="color: Green;">Thats Right !!</p>
+                <p style="color: Green;">The Number Is {{ num }}</p>
+                <button> Play Again </button>
+            </form>
+        {% endif %}
+        </div>
+    </body>
+
+</html>

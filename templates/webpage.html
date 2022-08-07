@@ -1,0 +1,152 @@
+
+<!DOCTYPE html> 
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> My Portfolio </title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+  <!-- Move to up bottom -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  
+  <!-- navigation menu -->
+  <nav>
+    <div class="navbar">
+      <div class="logo">Portfolio.</div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+      </ul>
+      <div class="media-icons">
+        <a href="https://www.linkedin.com/in/amisha-m-904a45127"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com/AmishaMurarka"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://public.tableau.com/app/profile/amisha.nirmal.murarka"><i><img src="https://img.icons8.com/color/48/000000/tableau-software.png" width="30" height="30"/></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Home Section Start -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="text">
+        <div class="text-one">Hello,</div>
+        <div class="text-two">I'm Amisha Murarka</div>
+        <div class="text-three">Data Science Enthusiast</div>
+        <div class="text-four">From India</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section Start -->
+  <section class="about" id="about">
+    <div class="content">
+      <div class="title"><span>About Me</span></div>
+      <div class="about-details">
+        <div class="left">
+          <img src="\static\portfolio_background.jpg" alt="Portfolio">
+        </div>
+        <div class="right">
+          <div class="topic">Data Is My Passion</div>
+          <p>Looking to leverage machine learning and data science skills to drive continuous improvement and 
+          automation in business process decision making.</p>
+          <!--<div class="button">
+            <button>Download CV</button>
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Skill Section Start -->
+  <section class="skills" id="skills">
+    <div class="content">
+      <div class="title"><span>My Skills & Projects</span></div>
+      <div class="skills-details">
+        <div class="boxes">
+          {% for item in skill %}
+          <div class="box">
+            <div class="topic"><b>{{ item[0] }}</b></div>
+            <div class="topic">{{ item[1] }}</div>
+            <div class="per">{{ item[2] }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Projects Section Start -->
+  <section class="projects" id="projects">
+    <div class="content">
+      <div class="title"><span>My Projects</span></div>
+      <div class="boxes">
+        {% for item in project %}
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <div class="topic">{{ item[1] }}</div>
+          <p>{{ item[2] }}</p>
+          </br>
+          <p><b>Primary Language:</b> {{ item[3] }}</p>
+          {% if item[4] != '' %}
+          <p><b>Secondary Language:</b> {{ item[4] }}</p>
+          {% endif %}
+          <p><b>Objective:</b> {{ item[5] }}</p>
+          <p><b>Status:</b> {{ item[6] }}</p>
+          {% if item[-2] != '' %}
+          <div class="button">
+            <button><a href={{item[-2]}}>Github Link</a></button>
+          </div>
+          {% endif %}
+          {% if item[-1] != '' %}
+          <div class="button">
+            <button><a href={{item[-1]}}>Live Demo</a></button>
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section Start 
+  <section class="contact" id="contact">
+    <div class="content">
+      <div class="title"><span>Contact Me</span></div>
+      <div class="text">
+        <div class="topic">Have Any Projects?</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam neque ipsum corrupti dolores, facere numquam voluptate aspernatur sit perferendis qui nisi modi! Recusandae deserunt consequatur voluptatibus alias repellendus nobis eligendi.</p>
+        <div class="button">
+          <button>Let's Chat</button>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Footer Section Start -->
+  <footer>
+    <div class="text">
+      <span>Created By <a href="https://www.linkedin.com/in/amisha-m-904a45127">AmishaMurarka</a> | 2022 All Rights Reserved.</span>
+    </div>
+  </footer>
+  <script src="/static/script.js"></script>
+</body>
+</html>
+
+

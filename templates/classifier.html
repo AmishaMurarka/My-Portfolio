@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="\static\add_project_style.css" />
+    </head>
+    <body>
+        <div class="detailSection">
+            <form action="/wheat_classifier/predict" method="POST" class="projectForm">
+            <h2>Wheat Kernel Classification</h2>
+            <ul class="noBullet">
+                <li>
+                    <label for="area"></label>
+                    <input type="number" min="1" max="30" id="area" name="area" placeholder="Enter Area(1-30)*" value="" required/>
+                </li>
+                <li>
+                    <label for="peri"></label>
+                    <input type="number" min="1" max="30" id="peri" name="peri" placeholder="Enter Perimeter(1-30)*" value="" required/>
+                </li>
+                <li>
+                    <label for="compact"></label>
+                    <input type="number" min="0" max="1" id="compact" name="compact" placeholder="Enter Compactness(0-1)*" value="" required/>
+                </li>
+                <li>
+                    <label for="length"></label>
+                    <input type="number" min="1" max="10" id="length" name="length" placeholder="Enter Kernel Length(1-10)*" value="" required/>
+                </li>
+                <li>
+                    <label for="width"></label>
+                    <input type="number" min="1" max="10" id="width" name="width" placeholder="Enter Kernel Width(1-10)*" value="" required/>
+                </li>
+                <li>
+                    <label for="coeff"></label>
+                    <input type="number" min="0" max="10" id="coeff" name="coeff" placeholder="Enter AsymmetryCoefficient(0-10)*" value="" required/>
+                </li>
+                <li>
+                    <label for="groove"></label>
+                    <input type="number" min="1" max="10" id="groove" name="groove" placeholder="Enter Groove Length(1-10)*" value="" required/>
+                </li>
+                <li id="center-btn">
+                    <input type="submit" id="pred" name="pred" alt="Predict">
+                </li>
+            </ul>
+            <h2>Kernel Type: {{ prediction }}</h2>
+            </form>
+        </div>
+    </body>
+</html>

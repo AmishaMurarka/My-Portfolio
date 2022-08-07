@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+:root{
+    --primary-color:#ff8882;
+    --black-color:#0E2431;
+    --white-color:#fff;
+}
+
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background: url("/static/background.png") no-repeat;;
+}
+
+.detailSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  margin: 10px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--white-color);
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 25px;
+}
+
+.projectForm {
+  background: var(--primary-color);
+  text-align: center;
+  width: 50%;
+  border: none;
+  justify-content: center;
+  border-bottom: 2px solid var(--primary-color);
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  }
+
+input, select, textarea {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: var(--primary-color);
+  border-bottom: 2px solid var(--white-color);
+  color: var(--white-color); 
+  font-size: 16;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--white-color);
+  font-family: 'Ubuntu', sans-serif;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--white-color);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.projectForm #center-btn{
+  width: 100%;
+  justify-content: center;
+}
+
+#center-btn input {
+    outline:none;
+    padding:8px 16px;
+    margin: 20px;
+    font-size: 25px;
+    width:25%;
+    font-weight: 400;
+    background:var(--white-color);
+    color:var(--primary-color);
+    cursor:pointer;
+    border-radius:12px;
+    border:0px solid transparent;
+    transition: all 0.4s ease;
+  }
+
+.noBullet {
+  list-style-type: none;
+  padding: 0;
+}
